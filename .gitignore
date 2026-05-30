@@ -1,0 +1,19 @@
+# IntelliJ
+.idea/
+**/.idea/
+*.iml
+**/*.iml
+
+# Maven
+target/
+**/target/
+
+# Eclipse / STS
+.project
+.classpath
+.settings/
+.springBeans
+.sts4-cache
+
+# VS Code
+.vscode/
