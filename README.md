@@ -1,14 +1,8 @@
 # Spring Boot 0 to 100 🚀
 
-This repository contains my learning journey of **Spring Framework & Spring Boot** including:
+This repository documents my journey of learning **Spring Framework and Spring Boot from basics to advanced concepts** through notes, homework assignments, hands-on coding exercises, and practical implementations.
 
-* Notes
-* Homework
-* Practice Code
-* Assignments
-* Module-wise implementations
-
-The goal of this repository is to document concepts practically while preparing for backend development and real-world Spring Boot applications.
+The objective is to build a strong foundation in backend development while understanding how enterprise-grade Spring Boot applications are designed and developed.
 
 ---
 
@@ -16,81 +10,227 @@ The goal of this repository is to document concepts practically while preparing 
 
 ## Module 1 - Introduction to Spring & Spring Boot
 
-Topics covered:
+Topics Covered:
 
-* Introduction to Spring Framework
-* Dependency Injection
-* Beans
-* Inversion of Control (IoC)
-* Spring Boot Basics
-* Maven
-* Auto Configuration
-* Constructor Injection
-* `@Component`
-* `@Autowired`
-* `@Qualifier`
+- Introduction to Spring Framework
+- Dependency Injection (DI)
+- Inversion of Control (IoC)
+- Spring Beans
+- Spring Container
+- Constructor Injection
+- Maven
+- Spring Boot Basics
+- Auto Configuration
+- Bean Management
+- Component Scanning
+
+### Important Annotations
+
+```java
+@Component
+@Autowired
+@Qualifier
+```
+
+---
+
+## Module 2 - Spring Web MVC & REST APIs
+
+Topics Covered:
+
+- REST APIs
+- HTTP Methods
+- Request Mapping
+- Path Variables
+- Request Parameters
+- Request Body Handling
+- ResponseEntity
+- DTOs
+- Validation Framework
+- Global Exception Handling
+- Custom Validation Annotations
+- Structured API Responses
+
+### Important Annotations
+
+```java
+@RestController
+@RequestMapping
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
+
+@RequestBody
+@PathVariable
+@RequestParam
+
+@Valid
+@NotNull
+@NotBlank
+@Email
+
+@RestControllerAdvice
+@ExceptionHandler
+```
 
 ---
 
 # 📝 Homework Implementations
 
-## 1. Alice and her Bakery 🍰
+## Module 1 Homework
+
+### Alice and her Bakery 🍰
 
 Implemented:
 
-* Interfaces (`Frosting`, `Syrup`)
-* Multiple implementations:
-
-  * Chocolate
-  * Strawberry
-* Dependency Injection
-* Constructor Injection
-* Bean Management using Spring
+- Interfaces (`Frosting`, `Syrup`)
+- Multiple implementations:
+  - Chocolate
+  - Strawberry
+- Dependency Injection
+- Constructor Injection
+- Bean Management using Spring
 
 ### Concepts Used
 
-* `@Component`
-* `@Qualifier`
-* Spring Beans
-* Dependency Injection
+```java
+@Component
+@Qualifier
+@Autowired
+```
+
+---
+
+## Module 2 Homework
+
+### Department REST APIs & Validation
+
+Implemented:
+
+- Department CRUD APIs
+- Request Validation
+- Global Exception Handling
+- Custom Error Response Structure
+- Prime Number Validation Annotation
+- Password Strength Validation Annotation
+
+### Concepts Used
+
+```java
+@RestController
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
+
+@Valid
+@NotBlank
+@Email
+@URL
+@CreditCardNumber
+
+@RestControllerAdvice
+@ExceptionHandler
+```
+
+### Custom Annotations
+
+```java
+@PrimeNumber
+@ValidPassword
+```
 
 ---
 
 # 🛠️ Tech Stack
 
-* Java
-* Spring Boot
-* Maven
-* Git & GitHub
+- Java
+- Spring Framework
+- Spring Boot
+- Spring Web MVC
+- Hibernate Validator
+- Maven
+- Git
+- GitHub
 
 ---
 
 # 📂 Repository Structure
 
-```text id="q2m8rv"
+```text
 Spring-Boot-0to100/
 │
 ├── module-1-spring-introduction/
 │   ├── notes/
 │   ├── homework/
-│   └── README.md
+│
+├── module-2-spring-web-mvc/
+│   ├── notes/
+│   ├── homework/
+│
+└── README.md
 ```
 
 ---
 
 # 🎯 Learning Goals
 
-* Master Spring Boot backend development
-* Build scalable backend applications
-* Learn Microservices & Distributed Systems
-* Strengthen Java backend fundamentals
+- Master Core Spring Framework
+- Master Spring Boot Development
+- Build RESTful APIs
+- Learn Validation & Exception Handling
+- Develop Production-Ready Backend Applications
+- Learn Spring Security
+- Learn Microservices Architecture
+- Strengthen Java Backend Development Skills
 
 ---
 
-# 🔗 Branch
+# 📌 Progress Summary
 
-Current Branch:
-`Week1-Module1-Homwework-Notes`
+### Completed
 
-Repository:
-[Spring-Boot-0to100 Repository](https://github.com/rahul22mrk/Spring-Boot-0to100?utm_source=chatgpt.com)
+✅ Spring Framework Fundamentals
+
+✅ Dependency Injection
+
+✅ Bean Management
+
+✅ Spring Boot Basics
+
+✅ Spring Web MVC
+
+✅ REST APIs
+
+✅ Validation Framework
+
+✅ Global Exception Handling
+
+✅ Custom Validation Annotations
+
+---
+
+### Upcoming
+
+🔄 Spring Data JPA
+
+🔄 Database Integration
+
+🔄 Spring Security
+
+🔄 JWT Authentication
+
+🔄 Microservices
+
+🔄 Docker
+
+🔄 System Design
+
+---
+
+# 🔗 Repository
+
+GitHub Repository:
+
+https://github.com/rahul22mrk/Spring-Boot-0to100
