@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import module2_homework.spring_web_mvc.annotations.PrimeNumberValidation;
 import org.hibernate.validator.constraints.CreditCardNumber;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
@@ -71,4 +72,7 @@ public class DepartmentDTO {
 
     @AssertFalse
     private Boolean terminated;
+
+    @PrimeNumberValidation
+    private Integer primeNumber;
 }
