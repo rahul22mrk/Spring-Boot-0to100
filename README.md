@@ -1,8 +1,16 @@
 # Spring Boot 0 to 100 🚀
 
-This repository documents my journey of learning **Spring Framework and Spring Boot from basics to advanced concepts** through notes, homework assignments, hands-on coding exercises, and practical implementations.
+This repository documents my complete journey of learning **Spring Framework and Spring Boot** from fundamentals to advanced backend development concepts.
 
-The objective is to build a strong foundation in backend development while understanding how enterprise-grade Spring Boot applications are designed and developed.
+The repository contains:
+
+- 📚 Detailed Notes
+- 📝 Homework Assignments
+- 💻 Practice Implementations
+- 🏗️ Mini Projects
+- 📦 Module-wise Learning Structure
+
+The goal is to build strong backend engineering skills while understanding how real-world Spring Boot applications are designed and developed.
 
 ---
 
@@ -12,24 +20,41 @@ The objective is to build a strong foundation in backend development while under
 
 Topics Covered:
 
-- Introduction to Spring Framework
-- Dependency Injection (DI)
-- Inversion of Control (IoC)
+- Spring Framework Introduction
+- IoC (Inversion of Control)
+- Dependency Injection
 - Spring Beans
 - Spring Container
 - Constructor Injection
-- Maven
 - Spring Boot Basics
+- Maven
 - Auto Configuration
-- Bean Management
 - Component Scanning
 
 ### Important Annotations
 
 ```java
+@SpringBootApplication
+
 @Component
+
+@Service
+
+@Repository
+
+@Controller
+
+@RestController
+
 @Autowired
+
 @Qualifier
+
+@Configuration
+
+@Bean
+
+@Value
 ```
 
 ---
@@ -41,21 +66,21 @@ Topics Covered:
 - REST APIs
 - HTTP Methods
 - Request Mapping
+- Request Body Handling
 - Path Variables
 - Request Parameters
-- Request Body Handling
 - ResponseEntity
-- DTOs
 - Validation Framework
 - Global Exception Handling
 - Custom Validation Annotations
-- Structured API Responses
 
 ### Important Annotations
 
 ```java
 @RestController
+
 @RequestMapping
+
 @GetMapping
 @PostMapping
 @PutMapping
@@ -66,6 +91,8 @@ Topics Covered:
 @RequestParam
 
 @Valid
+@Validated
+
 @NotNull
 @NotBlank
 @Email
@@ -78,68 +105,32 @@ Topics Covered:
 
 # 📝 Homework Implementations
 
-## Module 1 Homework
+## Module 1
 
 ### Alice and her Bakery 🍰
 
 Implemented:
 
-- Interfaces (`Frosting`, `Syrup`)
-- Multiple implementations:
-  - Chocolate
-  - Strawberry
+- Interfaces
+- Multiple Bean Implementations
 - Dependency Injection
 - Constructor Injection
-- Bean Management using Spring
-
-### Concepts Used
-
-```java
-@Component
-@Qualifier
-@Autowired
-```
+- Bean Resolution using `@Qualifier`
 
 ---
 
-## Module 2 Homework
+## Module 2
 
 ### Department REST APIs & Validation
 
 Implemented:
 
 - Department CRUD APIs
-- Request Validation
+- Bean Validation
 - Global Exception Handling
-- Custom Error Response Structure
-- Prime Number Validation Annotation
-- Password Strength Validation Annotation
-
-### Concepts Used
-
-```java
-@RestController
-@GetMapping
-@PostMapping
-@PutMapping
-@DeleteMapping
-
-@Valid
-@NotBlank
-@Email
-@URL
-@CreditCardNumber
-
-@RestControllerAdvice
-@ExceptionHandler
-```
-
-### Custom Annotations
-
-```java
-@PrimeNumber
-@ValidPassword
-```
+- Structured Error Responses
+- Prime Number Validator
+- Password Validator
 
 ---
 
@@ -162,12 +153,8 @@ Implemented:
 Spring-Boot-0to100/
 │
 ├── module-1-spring-introduction/
-│   ├── notes/
-│   ├── homework/
 │
 ├── module-2-spring-web-mvc/
-│   ├── notes/
-│   ├── homework/
 │
 └── README.md
 ```
@@ -176,22 +163,23 @@ Spring-Boot-0to100/
 
 # 🎯 Learning Goals
 
-- Master Core Spring Framework
-- Master Spring Boot Development
-- Build RESTful APIs
+- Master Spring Framework
+- Master Spring Boot
+- Build REST APIs
 - Learn Validation & Exception Handling
-- Develop Production-Ready Backend Applications
+- Learn Spring Data JPA
 - Learn Spring Security
-- Learn Microservices Architecture
-- Strengthen Java Backend Development Skills
+- Learn Microservices
+- Learn Distributed Systems
+- Build Production Ready Applications
 
 ---
 
-# 📌 Progress Summary
+# 📌 Progress
 
 ### Completed
 
-✅ Spring Framework Fundamentals
+✅ Spring Fundamentals
 
 ✅ Dependency Injection
 
@@ -205,9 +193,9 @@ Spring-Boot-0to100/
 
 ✅ Validation Framework
 
-✅ Global Exception Handling
+✅ Exception Handling
 
-✅ Custom Validation Annotations
+✅ Custom Validation
 
 ---
 
@@ -221,16 +209,14 @@ Spring-Boot-0to100/
 
 🔄 JWT Authentication
 
-🔄 Microservices
-
 🔄 Docker
+
+🔄 Microservices
 
 🔄 System Design
 
 ---
 
 # 🔗 Repository
-
-GitHub Repository:
 
 https://github.com/rahul22mrk/Spring-Boot-0to100
