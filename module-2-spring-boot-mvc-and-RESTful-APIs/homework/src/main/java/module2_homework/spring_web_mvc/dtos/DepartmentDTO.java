@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import module2_homework.spring_web_mvc.annotations.PasswordValidation;
 import module2_homework.spring_web_mvc.annotations.PrimeNumberValidation;
 import org.hibernate.validator.constraints.CreditCardNumber;
 import org.hibernate.validator.constraints.Length;
@@ -75,4 +76,7 @@ public class DepartmentDTO {
 
     @PrimeNumberValidation
     private Integer primeNumber;
+
+    @PasswordValidation
+    private String password;
 }
