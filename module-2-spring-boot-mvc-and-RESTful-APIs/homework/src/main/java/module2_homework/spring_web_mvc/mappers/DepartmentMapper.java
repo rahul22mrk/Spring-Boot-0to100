@@ -1,8 +1,8 @@
-package module2_homework.spring_web_mvc.Mapper;
+package module2_homework.spring_web_mvc.mappers;
 
 
-import module2_homework.spring_web_mvc.DTO.DepartmentDTO;
-import module2_homework.spring_web_mvc.Entity.Department;
+import module2_homework.spring_web_mvc.dtos.DepartmentDTO;
+import module2_homework.spring_web_mvc.entities.Department;
 import org.mapstruct.Mapper;
 
 @Mapper( componentModel ="spring")

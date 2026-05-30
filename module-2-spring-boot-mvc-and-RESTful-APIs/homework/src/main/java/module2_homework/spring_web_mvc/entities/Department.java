@@ -1,4 +1,4 @@
-package module2_homework.spring_web_mvc.Entity;
+package module2_homework.spring_web_mvc.entities;
 
 
 import lombok.AllArgsConstructor;
