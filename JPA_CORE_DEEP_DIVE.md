@@ -759,3 +759,80 @@ List<EmployeeSalaryOnly> salaries = employeeRepository.findByDepartment("IT", Em
 │       │       │                                                │
 │       │       ├── PagingAndSortingRepository (Sort + Page)    │
 │       │       │       │                                        │
+│       │       │       ├── JpaRepository (JPA extras)          │
+│       │       │       │       │                                │
+│       │       │       │       ← USE THIS ONE!                 │
+│                                                                │
+└──────────────────────────────────────────────────────────────┘
+```
+
+## What Each Interface Provides:
+
+| Interface | Methods | Use When |
+|---|---|---|
+| **Repository** | None (marker) | Custom base |
+| **CrudRepository** | save, findById, findAll, delete, count, exists | Basic CRUD |
+| **PagingAndSortingRepository** | + findAll(Sort), findAll(Pageable) | Pagination needed |
+| **JpaRepository** | + flush, saveAndFlush, deleteInBatch, findAll(Sort), findAll(Pageable) | **Always use this!** |
+
+## JpaRepository - All Methods:
+
+```java
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+    
+    // ═══ INHERITED METHODS (No code needed!) ═══
+    
+    // --- Save ---
+    Employee save(Employee emp);            // INSERT or UPDATE
+    List<Employee> saveAll(Iterable<Employee> emps); // Batch save
+    Employee saveAndFlush(Employee emp);    // Save + immediate flush
+    
+    // --- Read ---
+    Optional<Employee> findById(Long id);   // Find by PK
+    List<Employee> findAll();               // Get all
+    List<Employee> findAllById(Iterable<Long> ids); // By multiple IDs
+    
+    // --- Delete ---
+    void deleteById(Long id);               // Delete by PK
+    void delete(Employee emp);              // Delete entity
+    void deleteAll();                       // Delete all (one by one)
+    void deleteAllInBatch();                // Delete all (1 query, faster!)
+    void deleteAllInBatch(Iterable<Employee> emps); // Batch delete
+    
+    // --- Check ---
+    boolean existsById(Long id);            // Exists?
+    long count();                           // Total records
+    
+    // --- Pagination & Sorting ---
+    List<Employee> findAll(Sort sort);      // Sorted list
+    Page<Employee> findAll(Pageable pageable); // Paginated
+    
+    // --- Flush ---
+    void flush();                           // Sync PC to DB
+}
+```
+
+## Custom Query Methods (Method Naming Convention):
+
+```java
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+    
+    // ═══ FIND BY ═══
+    List<Employee> findByName(String name);
+    List<Employee> findByDepartment(String dept);
+    Employee findByEmail(String email);           // Single result
+    
+    // ═══ FIND BY MULTIPLE FIELDS ═══
+    List<Employee> findByNameAndDepartment(String name, String dept);
+    List<Employee> findByNameOrEmail(String name, String email);
+    
+    // ═══ COMPARISON ═══
+    List<Employee> findBySalaryGreaterThan(BigDecimal salary);    // >
+    List<Employee> findBySalaryLessThan(BigDecimal salary);       // <
+    List<Employee> findBySalaryBetween(BigDecimal min, BigDecimal max); // BETWEEN
+    List<Employee> findByAgeGreaterThanEqual(int age);            // >=
+    
+    // ═══ LIKE ═══
+    List<Employee> findByNameContaining(String keyword);   // %keyword%
+    List<Employee> findByNameStartingWith(String prefix);  // prefix%
+    List<Employee> find
